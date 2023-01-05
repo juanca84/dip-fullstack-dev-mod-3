@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi lista de tareas</title>
+  </head>
+  <body>
+    <h1>Mi lista de tareas</h1>
+    <ul>
+      {% for todo in todos %}
+        <li>{{ todo }}</li>
+      {% endfor %}
+    </ul>
+    <form action="/add_todo" method="post">
+      <input type="text" name="todo_text">
+      <button type="submit">Añadir tarea</button>
+    </form>
+  </body>
+</html>
