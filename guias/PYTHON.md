@@ -146,6 +146,7 @@ except ValueError:
 La programación orientada a objetos (POO) es un paradigma de programación que se basa en la creación de objetos que tienen atributos y métodos. En Python, se pueden crear clases para definir los atributos y métodos de un objeto.
 
 Ejemplo:
+
 ```py
 class Auto:
     def __init__(self, marca, modelo, color):

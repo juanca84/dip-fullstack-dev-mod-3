@@ -35,11 +35,11 @@ Algunos ejemplos de lenguajes de programación multiparadigma incluyen:
 
 ### Python
 
-[Aquí](guias/JAVASCRIPT.md) puedes obtener una guía rapida acerca de Python.
+[Aquí](guias/PYTHON.md) puedes obtener una guía rapida acerca de Python.
 
 ### Javascript
 
-[Aquí](guias/PYTHON.md) puedes obtener una guía rapida acerca de Javascript.
+[Aquí](guias/JAVASCRIPT.md) puedes obtener una guía rapida acerca de Javascript.
 
 ---
 
