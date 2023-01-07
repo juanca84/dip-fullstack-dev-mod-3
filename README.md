@@ -45,6 +45,40 @@ Algunos ejemplos de lenguajes de programación multiparadigma incluyen:
 
 ## BASES DE DATOS
 
+### ¿Qué es una base de datos?
+
+Una base de datos es una herramienta que recopila datos, los organiza y los relaciona para que se pueda hacer una rápida búsqueda y recuperar con ayuda de un ordenador. Hoy en día, las bases de datos también sirven para desarrollar análisis. Las bases de datos más modernas tienen motores específicos para sacar informes de datos complejos.
+
+### Tipos de base de datos
+
+- Relacional
+- Distribuida
+- NoSQL
+- Orientada a objetos
+- Gráficas.
+
+#### Base de datos relacional
+
+La base de datos relacional es una recopilación de la información empresarial organizada de tal forma que se puede consultar, actualizar, analizar y sacar los datos fácilmente. La información se encuentra en tablas y campos relacionados entre sí
+
+### Base de datos distribuida
+
+La base de datos distribuida consiste en el almacenamiento de porciones de la base de datos en diferentes ubicaciones físicas y, por tanto, el procesamiento está distribuido o replicado entre los distintos puntos de una red de trabajo.
+
+Consecuentemente, la base de datos distribuida tiene una mayor disponibilidad de los datos debido a sus múltiples ubicaciones. De esta forma, si una de las bases de datos fallase, se podría seguir funcionando correctamente, aunque puede que un poco ralentizado. Sin embargo, esta misma característica de estar distribuido puede provocar que haya duplicidad de los datos y un menor nivel de seguridad.
+
+#### Base de datos NoSQL
+
+El nombre de la base de datos NoSQL proviene de Not only SQL o, en español, no solo SQL. Esto se debe a que este tipo de base de datos suele evitar el uso del SQL o lo usa de apoyo, pero no como consulta. El hecho de evitar el SQL es porque se usa para proyectos en los que se necesita trabajar en la base de datos con un gran volumen. En las bases de datos con lenguaje SQL, los distintos atributos de un elemento, están en diferentes columnas, mientras que en una NoSQL todos los atributos se encuentran en una misma columna, ahorrando espacio.
+
+#### Base de datos orientada a objetos
+
+La base de datos orientada a objetos, o Object-Oriented Database, representa los datos en forma de objetos y clases. El objeto puede ser desde un resultado de búsqueda a una tabla; y una clase es una colección de objetos.
+
+#### Base de datos gráfica o de grafos
+
+En cuanto a la base de datos gráfica, también conocida como orientada a grafos, se diferencian de las anteriores en que están especializadas en establecer relaciones entre los datos de forma visual y navegar por dichas relaciones. Para leer la información, hay que leer los nodos o conectores (puntos de conexión de los datos de las tablas), generando un lenguaje natural.
+
 ---
 
 ## PROGRAMACION ORIENTADA A OBJETOS
