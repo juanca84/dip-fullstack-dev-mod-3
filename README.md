@@ -496,6 +496,14 @@ suma = reduce(lambda acumulador, valor: acumulador + valor, numeros, 0)  # 15
 
 ## PATRÓN MODELO VISTA CONTROLADOR
 
+Modelo-Vista-Controlador (MVC) es un patrón de diseño de software que se utiliza para separar la lógica de la aplicación de la interfaz de usuario. Este patrón se divide en tres componentes:
+
+- `Modelo`: representa el estado de la aplicación y lógica de negocio. El modelo se encarga de gestionar y almacenar los datos y proporcionar funcionalidades para acceder a ellos.
+
+- `Vista`: es la parte de la aplicación que se encarga de mostrar los datos al usuario y proporcionar una interfaz de usuario. La vista recibe información del modelo y la muestra al usuario.
+
+- `Controlador`: es la parte de la aplicación que se encarga de gestionar las interacciones del usuario y actualizar el modelo y la vista según sea necesario. El controlador recibe las acciones del usuario a través de la vista y las procesa para actualizar el modelo y la vista.
+
 Acá puedes ver 2 ejemplos de una implementación del patrón **Modelo-Vista-Controlador**
 
 - [Aqui](./mvc-js) en **Javascript** usando **NodeJS**x
@@ -503,7 +511,97 @@ Acá puedes ver 2 ejemplos de una implementación del patrón **Modelo-Vista-Con
 
 ---
 
+## API REST
+
+Una API REST (Representational State Transfer) es un estilo de arquitectura que se utiliza para diseñar servicios web. Se basa en el principio de "intercambio de representaciones de recursos" y permite que diferentes sistemas se comuniquen entre sí a través de la web utilizando el protocolo HTTP.
+
+Una API REST consta de un conjunto de puntos finales (o "recursos") a los que los clientes pueden enviar solicitudes utilizando distintos métodos HTTP, como `GET`, `POST`, `PUT` y `DELETE`. Cada punto final representa un recurso particular, y las solicitudes HTTP permiten realizar operaciones sobre esos recursos.
+
+Por ejemplo, supongamos que tenemos una API REST que gestiona una base de datos de películas. Podríamos tener un punto final llamado "películas" que permita realizar las siguientes operaciones:
+
+- `GET` /peliculas: para obtener la lista de todas las películas.
+- `GET` /peliculas/{id}: para obtener una película en particular por su ID.
+- `POST` /peliculas: para agregar una nueva película.
+- `PUT` /peliculas/{id}: para actualizar una película existente.
+- `DELETE` /peliculas/{id}: para eliminar una película.
+
+Cada una de estas operaciones se realiza enviando una solicitud HTTP con el método apropiado (`GET`, `POST`, `PUT`, `DELETE`) al punto final correspondiente. Los clientes de la API pueden ser otras aplicaciones web, aplicaciones móviles o cualquier otro sistema que necesite acceder a los datos de la base de datos de películas.
+
+Puede ver más información en este enlace: <https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design>
+
+### CODIGOS DE RESPUESTA HTTP
+
+Los códigos de respuesta son una parte importante de una API REST, ya que indican el resultado de una solicitud HTTP. Cada vez que un cliente envía una solicitud a una API REST, la API devuelve una respuesta con un código de estado que indica si la solicitud fue exitosa o no.
+
+Existen muchos códigos de estado diferentes, pero algunos de los más comunes son:
+
+- `200 OK`: la solicitud fue exitosa y se devolvió la información solicitada.
+- `201 Created`: se ha creado un nuevo recurso como resultado de la solicitud.
+- `204 No Content`: la solicitud fue exitosa, pero no hay nada que mostrar (por ejemplo, cuando se elimina un recurso).
+- `400 Bad Request`: la solicitud no era válida.
+- `401 Unauthorized`: la solicitud requería autenticación y no se proporcionó la información de autenticación necesaria.
+- `404 Not Found`: el recurso solicitado no existe.
+- `500 Internal Server Error`: ha ocurrido un error en el servidor.
+
+Los códigos de estado son útiles para que los clientes de la API puedan determinar el resultado de una solicitud y tomar medidas en consecuencia. Por ejemplo, si un cliente envía una solicitud POST para crear un nuevo recurso y recibe un código de estado 201 Created, sabrá que la solicitud fue exitosa y que el recurso se ha creado correctamente.
+
+Puede ver más información en este enlace: <https://www.javaguides.net/2021/01/rest-api-http-status-codes.html>
+
+---
+
 ## VERSIONAMIENTO DE CÓDIGO - GIT
+
+Git es un sistema de control de versiones que se utiliza para llevar un registro de los cambios realizados en un proyecto a lo largo del tiempo. Con Git, puedes revisar versiones anteriores de tu proyecto, revertir cambios, crear ramas (o "branches") para desarrollar funcionalidades de forma aislada y fusionar cambios de distintas ramas.
+
+Para empezar a utilizar Git, primero debes inicializar un repositorio en tu proyecto. Un repositorio es una carpeta que contiene todos los archivos y cambios de tu proyecto y que está siendo controlada por Git. Para inicializar un repositorio, puedes usar el comando `git init`.
+
+```sh
+git init
+```
+
+Una vez que tienes el repositorio inicializado, puedes empezar a realizar cambios en los archivos del proyecto y guardar esos cambios en Git. Cada vez que quieras guardar un cambio, debes agregar los archivos modificados al "índice" de Git con el comando `git add`, y luego hacer un "commit" de los cambios con el comando `git commit`. Un commit es un punto en el historial del proyecto en el que guardas un conjunto de cambios.
+
+```sh
+git add archivo1 archivo2
+git commit -m "Mensaje descriptivo del commit"
+```
+Git guarda los cambios en forma de "ramas". La rama principal de un proyecto se llama "master". Cuando haces un commit, Git agrega el commit a la rama "master". Puedes crear ramas adicionales para desarrollar funcionalidades de forma aislada y
+uego fusionar esas ramas de vuelta a la rama "master" cuando estén listas. Para crear una rama, puedes usar el comando `git branch` seguido del nombre de la rama.
+
+```sh
+git branch nombre-rama
+```
+
+Para cambiar a una rama, puedes usar el comando `git checkout` seguido del nombre de la rama.
+
+```sh
+git checkout nombre-rama
+```
+
+Cuando hayas terminado de desarrollar la funcionalidad de tu rama, puedes fusionarla de vuelta a la rama "master" con el comando `git merge`.
+
+```sh
+git checkout master
+git merge nombre-rama
+```
+
+Git también te permite revertir cambios y ver el historial de commits de tu proyecto. Para revertir cambios, puedes usar el comando `git revert`. Para ver el historial de commits, puedes usar el comando `git log`.
+
+El comando `git status` es uno de los más comunes en Git y se utiliza para ver el estado actual del repositorio. Al ejecutar este comando, Git muestra una lista de los archivos que han sido modificados y aún no han sido guardados en un commit, así como también los archivos que están siendo seguidos y están incluidos en el índice de Git.
+
+Por ejemplo, si modificas un archivo en tu proyecto pero aún no has hecho un commit de los cambios, al ejecutar `git status` Git te mostrará ese archivo como "modified". Si agregas el archivo al índice con el comando `git add`, Git lo mostrará como "staged". Y si haces un commit de los cambios, Git dejará de mostrar el archivo en la salida de `git status`.
+
+Además de mostrar los archivos modificados y preparados para el commit, `git status` también muestra en qué rama estás actualmente y si hay algún commit pendiente de fusionar a la rama actual.
+
+```sh
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..."
+```
 
 Recursos:
 
