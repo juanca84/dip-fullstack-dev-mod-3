@@ -386,13 +386,12 @@ function aplicarOperaciones(valor, funcion1, funcion2) {
 // La función aplicarOperaciones toma un valor y dos funciones como argumentos
 // y devuelve el resultado de aplicar las dos funciones al valor en ese orden.
 
-console.log(aplicarOperaciones(2, sumar, multiplicar)); /
-
+console.log(aplicarOperaciones(2, sumar, multiplicar));
 ```
 
 ##### En Python
 
-```js
+```py
 def sumar(x):
   return x + x
 
@@ -405,7 +404,7 @@ def aplicar_operaciones(valor, funcion1, funcion2):
 # La función aplicar_operaciones toma un valor y dos funciones como argumentos
 # y devuelve el resultado de aplicar las dos funciones al valor en ese orden.
 
-aplicar_operaciones(2, sumar, multiplicar 
+aplicar_operaciones(2, sumar, multiplicar)
 ```
 
 #### Uso de la recursividad
