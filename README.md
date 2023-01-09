@@ -79,6 +79,10 @@ La base de datos orientada a objetos, o Object-Oriented Database, representa los
 
 En cuanto a la base de datos gráfica, también conocida como orientada a grafos, se diferencian de las anteriores en que están especializadas en establecer relaciones entre los datos de forma visual y navegar por dichas relaciones. Para leer la información, hay que leer los nodos o conectores (puntos de conexión de los datos de las tablas), generando un lenguaje natural.
 
+### BASE DE DATOS POSTGRES
+
+- [Aquí](guias/POSTGRES.md) puedes ver una guía rapida de Postgres
+
 ---
 
 ## PROGRAMACION ORIENTADA A OBJETOS
