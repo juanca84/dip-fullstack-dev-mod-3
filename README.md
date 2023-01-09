@@ -87,6 +87,250 @@ En cuanto a la base de datos gráfica, también conocida como orientada a grafos
 
 ## PROGRAMACION ORIENTADA A OBJETOS
 
+Es un paradigma de la programación que se basa en el concepto de objetos, los cuales son entidades que tienen estados y comportamiento.
+En la POO se crean clases y estas sirven como plantillas para crear objetos similares y estos objetos a la vez pueden interactuar entre sí a través de mensajes que se envían entre ellos.
+
+Una de las ventajas de la POO es que permite crear programas modulares y reutilizables, ya que estos objetos usados pueden ser utilizados en distintas partes de nuestro programa o software.
+
+También nos permite dividir un problema complejo en partes más pequeñas y manejables, lo que hace más fácil escribir y mantener código.
+
+## PILARES DE LA PROGRAMACIÓN ORIENTADA A OBJETOS
+
+Los cuatro pilares de la programación orientada a objetos (POO) son:
+
+- **Abstracción**: consiste en representar la información de forma más simple y relevante para el problema que se está tratando, ocultando los detalles innecesarios.
+- **Encapsulamiento**: consiste en agrupar los datos y las funcionalidades que trabajan con ellos en un mismo objeto, de modo que se puedan ocultar ciertos detalles de implementación al usuario del objeto.
+- **Herencia**: consiste en que un objeto pueda heredar las propiedades y métodos de otro objeto, de modo que se pueda reutilizar código y se puedan crear jerarquías de objetos.
+- **Polimorfismo**: consiste en que un mismo objeto pueda tener diferentes formas de comportarse en diferentes contextos, o que diferentes objetos puedan tener un comportamiento similar en respuesta a una misma solicitud.
+
+### EJEMPLOS DE POO EN JAVASCRIPT Y PYTHON
+
+#### Declaración de objetos y clases
+
+##### En JS
+
+Por ejemplo:
+
+```js
+class Persona {
+  constructor(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+
+  saludar() {
+    console.log(`Hola, soy ${this.nombre} y tengo ${this.edad} años`);
+  }
+}
+
+Para crear la instancia
+let persona = new Persona("Juan", 30);
+
+Para llamar el método:
+
+persona.saludar(); // Imprime "Hola, soy Juan y tengo 30 años"
+```
+
+##### En Python
+
+```py
+class Persona:
+  def __init__(self, nombre, edad):
+    self.__nombre = nombre
+    self.__edad = edad
+    
+  def get_nombre(self):
+    return self.__nombre
+
+  def set_nombre(self, nuevo_nombre):
+    self.__nombre = nuevo_nombre
+
+  def saludar(self):
+    print(f"Hola, soy {self.__nombre} y tengo {self.__edad} años")
+    
+jorge = Persona("Jorge", 50)
+
+print(jorge.get_nombre())
+jorge.set_nombre('Raquel')
+print(jorge.get_nombre())
+
+jorge.saludar()
+```
+
+#### Uso de métodos privados
+
+##### En JS
+
+```js
+class Persona {
+    constructor(nombre, edad) {
+     this._nombre = nombre;
+     this._edad = edad;
+    }
+    
+    get_nombre() {
+        return this._nombre;
+    }
+    
+    set_nombre(nuevoNombre) {
+        this._nombre = nuevoNombre;
+    }
+    
+    saludar() {
+        console.log(`Hola, soy ${this._nombre} y tengo ${this._edad} años`)
+    }
+}
+
+let persona = new Persona("Juan", 30)
+persona.saludar()
+console.log(persona.get_nombre())
+persona.set_nombre('Raquel')
+console.log(persona.get_nombre())
+```
+
+##### En Python
+
+```py
+class Persona:
+  def __init__(self, nombre, edad):
+    self.__nombre = nombre
+    self.__edad = edad
+    
+  def get_nombre(self):
+    return self.__nombre
+
+  def set_nombre(self, nuevo_nombre):
+    self.__nombre = nuevo_nombre
+
+  def saludar(self):
+    print(f"Hola, soy {self.__nombre} y tengo {self.__edad} años")
+    
+jorge = Persona("Jorge", 50)
+
+print(jorge.get_nombre())
+jorge.set_nombre('Raquel')
+print(jorge.get_nombre())
+
+jorge.saludar()
+```
+
+#### Uso de herencia
+
+##### En JS
+
+```js
+class Persona {
+    constructor(nombre, edad) {
+     this.nombre = nombre;
+     this.edad = edad;
+    }
+    
+    saludar() {
+        console.log(`Hola, soy ${this.nombre} y tengo ${this.edad} años`)
+    }
+}
+
+class Estudiante extends Persona {
+    constructor(nombre, edad, carrera) {
+     super(nombre,edad)
+     this.carrera = carrera;
+    }
+    
+    saludar() {
+        super.saludar()
+        console.log(`Estudio ${this.carrera}`)
+    }
+}
+let juan = new Persona("Juan", 30)
+let paola = new Estudiante("Paola", 25, 'Informática')
+juan.saludar()
+paola.saludar()
+```
+
+##### En Python
+
+```py
+class Persona:
+  def __init__(self, nombre, edad):
+    self.nombre = nombre
+    self.edad = edad
+
+  def saludar(self):
+    print(f"Hola, soy {self.nombre} y tengo {self.edad} años")
+
+class Estudiante(Persona):
+  def __init__(self, nombre, edad, carrera):
+    super().__init__(nombre, edad)
+    self.carrera = carrera
+    
+  def saludar(self):
+    super().saludar()
+    print(f"Estudio {self.carrera}")
+      
+juan = Persona('juan', 35)
+raquel = Estudiante('raquel', 25, 'Ingenieria de Sistemas')
+juan.saludar()
+raquel.saludar()
+```
+
+#### Uso de polimorifismo
+
+##### En JS
+
+```js
+class Figura {
+  constructor(lado1, lado2) {
+    this.lado1 = lado1;
+    this.lado2 = lado2;
+  }
+
+  area() {
+    return this.lado1 * this.lado2;
+  }
+}
+
+class Cuadrado extends Figura {
+  constructor(lado) {
+    super(lado, lado);
+  }
+
+  area() {
+    return this.lado1 * this.lado1;
+  }
+}
+
+let figura = new Figura(5,10);
+console.log('el área de la figura es:', figura.area())
+
+let cuadrado = new Cuadrado(5);
+console.log('el área del cuadrado es:', cuadrado.area())
+```
+
+##### En Python
+
+```py
+class Figura:
+  def __init__(self, lado1, lado2):
+    self.lado1 = lado1
+    self.lado2 = lado2
+
+  def area(self):
+    return self.lado1 * self.lado2
+
+class Cuadrado(Figura):
+  def __init__(self, lado):
+    super().__init__(lado, lado)
+
+  def area(self):
+    return self.lado1 * self.lado1
+    
+figura = Figura(5,10)
+print(figura.area())
+
+cuadrado = Cuadrado(5)
+print(cuadrado.area())
+```
+
 ---
 
 ## PROGRAMACION FUNCIONAL
