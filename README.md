@@ -335,6 +335,163 @@ print(cuadrado.area())
 
 ## PROGRAMACION FUNCIONAL
 
+Los paradigmas de programación son los principios fundamentales de la programación de software.
+Por una parte hemos estado revisando todo lo que ha hemos visto por el momento es una programación imperativa.
+
+Pero por otra parte existe la programación declarativa, que contiene a la Programación lógica y programación funcional.
+
+El principio fundamental de la programación declarativa radica en la descripción del resultado final que se busca. Por lo tanto, en primera línea se encuentra el “qué” del resultado y no el “cómo” de los pasos que llevan a la solución, como es el caso en la programación imperativa.
+
+El paradigma de software lógico, denominado también como programación predicativa, se basa en la lógica matemática. En lugar de una sucesión de instrucciones, un software programado según este principio contiene un conjunto de principios que se pueden entender como una recopilación de hechos y suposiciones. Todas las solicitudes al programa se procesan de forma que el intérprete recurre a estos principios y les aplica reglas definidas previamente para alcanzar el resultado deseado.
+
+Algunos lenguajes que usan el paradigma de la programación funcional: Lisp, ML, Haskell, F#, Prolog y Oz.
+
+Y see utiliza en particular en el desarrollo de los siguientes programas o códigos:
+
+- Aplicaciones técnicas y matemáticas
+- Inteligencia Artificial (IA)
+- Compiladores y analizadores
+- Algoritmos
+
+Algunas de las características más comunes de la programación funcional son:
+
+- `Uso de funciones como valores de primera clase`: las funciones se pueden asignar a variables, pasar como argumentos a otras funciones y devolver como resultados.
+- `Inmutabilidad`: los valores no pueden ser modificados una vez creados. Si necesita cambiar un valor, debe crear uno nuevo.
+- `Evaluación perezosa`: los valores sólo se evalúan cuando son necesarios, lo que puede ser útil para operaciones con grandes cantidades de datos.
+- `Uso de funciones de orden superior`: las funciones que toman otras funciones como argumentos o devuelven funciones como resultados.
+- `Composición de funciones`: la creación de nuevas funciones a partir de otras funciones ya existentes.
+- `Puros`: las funciones que no tienen efectos secundarios y siempre devuelven el mismo resultado dado el mismo conjunto de argumentos.
+
+### EJEMPLOS DE PROGRAMACIÓN FUNCIONAL
+
+Python y Javascript son lenguajes de programación multiparadigma que admiten varias formas de programación, como la programación orientada a objetos y la programación funcional. Aunque no es tan pura como otros lenguajes funcionales, es posible utilizar características funcionales en Python y javascript.
+
+#### Composición de funciones
+
+##### En Javascript
+
+```js
+function sumar(x) {
+  return x + x;
+}
+
+function multiplicar(x) {
+  return x * x;
+}
+
+function aplicarOperaciones(valor, funcion1, funcion2) {
+  return funcion2(funcion1(valor));
+}
+
+// La función aplicarOperaciones toma un valor y dos funciones como argumentos
+// y devuelve el resultado de aplicar las dos funciones al valor en ese orden.
+
+console.log(aplicarOperaciones(2, sumar, multiplicar)); /
+
+```
+
+##### En Python
+
+```js
+def sumar(x):
+  return x + x
+
+def multiplicar(x):
+  return x * x
+
+def aplicar_operaciones(valor, funcion1, funcion2):
+  return funcion2(funcion1(valor))
+
+# La función aplicar_operaciones toma un valor y dos funciones como argumentos
+# y devuelve el resultado de aplicar las dos funciones al valor en ese orden.
+
+aplicar_operaciones(2, sumar, multiplicar 
+```
+
+#### Uso de la recursividad
+
+##### En Javascript
+
+```js
+function factorial(n) {
+  if (n === 1) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+
+factorial(5);  // 120
+```
+
+##### En Python
+
+```py
+def factorial(n):
+  if n == 1:
+    return 1
+  else:
+    return n * factorial(n - 1)
+
+factorial(5) #120
+```
+
+#### FUNCIONES LAMBDA
+
+Las funciones lambda, también conocidas como funciones anónimas, son funciones que no tienen un nombre y se utilizan para crear y pasar funciones como valores de primera clase de forma más concisa. Algunas de las características más comunes de las funciones lambda son:
+
+- No tienen un nombre: las funciones lambda no tienen un nombre y se definen en una sola línea.
+- Tienen una sintaxis concisa: las funciones lambda tienen una sintaxis más corta que las funciones normales, lo que las hace útiles para crear y pasar funciones como valores de primera clase.
+- Son útiles en la programación funcional: las funciones lambda son útiles en la programación funcional ya que permiten crear y pasar funciones como valores de primera clase de forma más concisa.
+
+##### En Javascript
+
+```js
+const sumar = (x, y) => x + y; sumar(2, 3); // 5
+console.log(sumar(2,3));
+```
+
+##### En Python
+
+```py
+sumar = lambda x, y: x + y sumar(2, 3) # 5
+print(sumar(2,3))
+```
+
+#### MAP, FILTER Y REDUCE
+
+##### En Javascript
+
+```js
+const numeros = [1, 2, 3, 4, 5];
+
+// Utilizando map para multiplicar todos los elementos de la lista por 2
+const dobles = numeros.map(x => x * 2);  // [2, 4, 6, 8, 10]
+
+// Utilizando filter para obtener sólo los números pares
+const pares = numeros.filter(x => x % 2 === 0);  // [2, 4]
+
+// Utilizando reduce para sumar todos los elementos de la lista
+const suma = numeros.reduce((acumulador, valor) => acumulador + valor, 0);  // 15
+```
+
+##### En Python
+
+```py
+numeros = [1, 2, 3, 4, 5]
+
+# Utilizando map para multiplicar todos los elementos de la lista por 2
+dobles = list(map(lambda x: x * 2, numeros))  # [2, 4, 6, 8, 10]
+
+# Utilizando filter para obtener sólo los números pares
+pares = list(filter(lambda x: x % 2 == 0, numeros))  # [2, 4]
+
+# Utilizando reduce para sumar todos los elementos de la lista
+from functools import reduce
+suma = reduce(lambda acumulador, valor: acumulador + valor, numeros, 0)  # 15
+
+```
+
 ---
 
 ## PATRÓN MODELO VISTA CONTROLADOR
