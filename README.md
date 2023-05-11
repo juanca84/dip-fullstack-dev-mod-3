@@ -505,7 +505,7 @@ Modelo-Vista-Controlador (MVC) es un patrón de diseño de software que se utili
 
 Acá puedes ver 2 ejemplos de una implementación del patrón **Modelo-Vista-Controlador**
 
-- [Aqui](./mvc-js) en **Javascript** usando **NodeJS**x
+- [Aqui](./mvc-js) en **Javascript** usando **NodeJS**
 - [Aqui](./mvc-py) en **Python** usando **Flask**
 
 ---
@@ -545,6 +545,8 @@ Existen muchos códigos de estado diferentes, pero algunos de los más comunes s
 Los códigos de estado son útiles para que los clientes de la API puedan determinar el resultado de una solicitud y tomar medidas en consecuencia. Por ejemplo, si un cliente envía una solicitud POST para crear un nuevo recurso y recibe un código de estado 201 Created, sabrá que la solicitud fue exitosa y que el recurso se ha creado correctamente.
 
 Puede ver más información en este enlace: <https://www.javaguides.net/2021/01/rest-api-http-status-codes.html>
+
+- [Aqui un ejemplo api-REST](./api-rest-js) en **Javascript** usando **NodeJS**
 
 ---
 
