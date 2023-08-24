@@ -1,8 +1,5 @@
-CREATE TABLE items (
-  id SERIAL PRIMARY KEY,
-  name TEXT
+CREATE TABLE todos (
+	id serial NOT NULL,
+	todo varchar NULL,
+	CONSTRAINT todos_pkey PRIMARY KEY (id)
 );
-
-INSERT INTO items (name) VALUES ('Item 1');
-INSERT INTO items (name) VALUES ('Item 2');
-INSERT INTO items (name) VALUES ('Item 3');
